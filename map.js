@@ -56,11 +56,22 @@ export const encodeMap = {
   'z': 25
 }
 
+export const mod = (max, value) => {
+  const num = typeof value === 'number' ? value : parseInt(value)
+  let result = num
+  if (num < 0) result = value + max
+  else if (num > max) result = value - max
+
+  const outOfBounds = result > max || result < 0
+  if (outOfBounds) return mod(max, result)
+  else return result
+}
+
 /*
 export const calculateOffset = (input) => {
   const num = typeof input === 'number' ? input : parseInt(input)
-  const min = 1
-  const max = 26
+  const min = 0
+  const max = 25
   if (num > max) return input - max
   if (num < min) return input + max
   return num
