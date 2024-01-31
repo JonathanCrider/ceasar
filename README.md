@@ -6,7 +6,7 @@ Encodes text with a simple ceasar cipher, where you can set the offset value
 ## Notable Issue
 JavaScript lacks a modulus operator.
 
-When I was first learning JS, the % symbol was referred to as 'mod'. If you are in the same boat, this is incorrect. It's a remainder. You can learn more about [modulus vs remainder here](https://dev.to/hamiecod/remainder-vs-modulus-3mc8).
+When I was first learning JS, the % symbol was referred to as 'mod'. If you are in the same boat, this is incorrect. It's a remainder. You can learn more about [modulus vs remainder here](https://www.logilax.com/javascript-modulo/).
 
 While this is not often an issue, this poses a problem for a shift cipher, as the resulting shift may go out of bounds of your character limit.
 
