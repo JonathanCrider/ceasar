@@ -57,12 +57,13 @@ export const encodeMap = {
 }
 
 export const mod = (max, value) => {
+  const min = 1
   const num = typeof value === 'number' ? value : parseInt(value)
   let result = num
-  if (num < 0) result = value + max
+  if (num < min) result = value + max
   else if (num > max) result = value - max
 
-  const outOfBounds = result > max || result < 0
+  const outOfBounds = result > max || result < min
   if (outOfBounds) return mod(max, result)
   else return result
 }
