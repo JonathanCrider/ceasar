@@ -1,4 +1,4 @@
-import { encodeMap, mod } from './map.js'
+import { encodeMap, mod26 } from './map.js'
 import { text } from './_text.js'
 
 const offset = parseInt(process.argv[2]) || 0
@@ -12,7 +12,7 @@ const encode = (string, offset) => {
     .split('')
     .reduce((acc, char) => {
       if (!char || char === ' ') return acc
-      return acc += mod(26, (encodeMap[char] - offset)) + ' '
+      return acc += mod26(26, (encodeMap[char] - offset)) + ' '
     }, '')
 }
 

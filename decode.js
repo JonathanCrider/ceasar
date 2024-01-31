@@ -1,4 +1,4 @@
-import { decodeMap, mod } from './map.js'
+import { decodeMap, mod26 } from './map.js'
 import { code } from './_text.js'
 
 const offset = parseInt(process.argv[2]) || 0
@@ -11,7 +11,7 @@ const decode = (string, offset) => {
       .toLowerCase()
       .split(' ')
       .reduce((acc, num) => {
-        const key = mod(26, (parseInt(num) + offset))
+        const key = mod26(26, (parseInt(num) + offset))
         if (!num) return acc
         return acc += decodeMap[key]
       }, '')

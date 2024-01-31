@@ -10,7 +10,7 @@ When I was first learning JS, the % symbol was referred to as 'mod'. If you are 
 
 While this is not often an issue, this poses a problem for a shift cipher, as the resulting shift may go out of bounds of your character limit.
 
-As such, it was necessary to create a mod function to handle this correctly. I know it could probably use some more finesse. It's also possible there is an implementation issue, so let me know if I got it wrong.
+As such, it was necessary to create a mod function to handle this correctly. I know it could probably use some more finesse. It's also possible there is an implementation issue, so let me know if I got it wrong. It could also be more generic, but it's not necessary for this project.
 
 ##Usage
 
