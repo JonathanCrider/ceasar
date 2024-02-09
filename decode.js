@@ -1,4 +1,4 @@
-import { decodeMap, mod26 } from './map.js'
+import { decodeMap, mod26 } from './utils.js'
 import { code } from './_text.js'
 
 const offset = parseInt(process.argv[2]) || 0
