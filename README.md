@@ -1,4 +1,5 @@
 # Simple Ceasar Cipher
+
 Small node cli project
 
 Encodes text with a simple ceasar cipher, where you can set the offset value
@@ -20,6 +21,7 @@ node decode 3 '17 2 21 17 16 17 15 6 11 4'
 ```
 
 ### Results
+
 Results are printed to the console
 
 ```bash
