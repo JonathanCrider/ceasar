@@ -1,4 +1,4 @@
-import { encodeMap, mod26 } from './utils.js'
+import { encodeMap, shift, mapMax } from './utils.js'
 import { text } from './_text.js'
 
 const offset = parseInt(process.argv[2]) || 0
@@ -12,7 +12,7 @@ const encode = (string, offset) => {
     .split('')
     .reduce((acc, char) => {
       if (!char || char.match(/\W/gm)) return acc
-      return acc += mod26(26, (encodeMap[char] - offset)) + ' '
+      return acc += shift(mapMax, (encodeMap[char] - offset)) + ' '
     }, '')
 }
 
